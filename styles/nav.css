@@ -1,0 +1,42 @@
+aside {
+    padding: 0 1em;
+    position: relative;
+    border-right: 2px solid black;
+    max-width: 350px;
+}
+
+.nav-links {
+    position: fixed;
+    left: 0;
+    padding-left: 1em;
+}
+
+.nav-links h3 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    color: #fbbb62;
+}
+
+.nav-links a {
+    display: block;
+    margin-bottom: 2em;
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+    -webkit-box-shadow: 3px 8px 5px 0px rgba(209,202,209,1);
+    -moz-box-shadow: 3px 8px 5px 0px rgba(209,202,209,1);
+    box-shadow: 3px 8px 5px 0px rgba(209,202,209,1);
+    font-weight: 600;
+    font-size: clamp(16px, 1.5vw, 24px);
+    color: black;
+    padding: 0.5em;
+    max-width: 15vw;
+}
+
+@media screen and (max-width: 650px) {
+    .nav-links a {
+        display: none;
+    }
+}
+

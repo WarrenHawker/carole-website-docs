@@ -1,0 +1,5 @@
+footer {
+    text-align: center;
+    grid-column: 1 / -1;
+    border-top: 2px solid black;
+}

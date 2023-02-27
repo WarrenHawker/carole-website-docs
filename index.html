@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/global.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Carole Website Docs</title>
 </head>
 <body>
@@ -13,6 +16,20 @@
         <h2>content management guide</h2>
         <p>written by Warren Hawker</p>
     </header>
+    <aside>
+        <nav>
+            <div class="nav-links">
+                <h3>Go To</h3>
+                <a href="#">Introduction</a>
+                <a href="#">Login</a>
+                <a href="#">Add media</a>
+                <a href="#">Add artwork</a>
+                <a href="#">Edit artwork</a>
+                <a href="#">Unpublish artwork</a>
+                <a href="#">Delete artwork</a>
+            </div>
+        </nav>
+    </aside>
     <main>
         <section class="intro">
             <h1>Introduction</h1>
@@ -28,17 +45,20 @@
             <p>
                 To login, go to <a href="https://be.contentful.com/login">https://be.contentful.com/login</a> and login with your credentials.
             </p>
-            <p>If you forget your password, click the "Reset password" button and enter your registered email address when prompted. You 
-                will receive an email with a password reset option to recover your account. If this doesn't work, contact the administrator. 
-            </p>
-            <img src="assets/login-contentful.png" alt="login screen"/>
+            <div class="img-text-container">
+                <div class="img-container">
+                    <img src="assets/login-contentful.png" alt="login screen"/>
+                </div>
+                <p>If you forget your password, click the "Reset password" button and enter your registered email address when prompted. You 
+                    will receive an email with a password reset option to recover your account. If this doesn't work, contact the administrator. 
+                </p>
+            </div>
             <p>
                 Once logged in you will be automatically taken to the Content page where you can see all the published artwork.
             </p>
-            <!-- image here -->
         </section>
         <section class="add-media">
-            <h1>Add new Media</h1>
+            <h1>Add new media</h1>
             <p>
                 The images for any new pieces of artwork need to be added as media before they can appear on the main website. 
                 This can either be done as you create the new artwork entries (see below) or ahead of time by adding media. 
@@ -96,33 +116,119 @@
         </section>
         <section class="add-artwork">
             <h1>Add new artwork</h1>
+            <p>
+                To get started, go to the <strong>Content</strong> tab at the top of the screen and you should see all the published artwork.
+            </p>
+            <!-- image here -->
+            <p>
+                To add a new artwork entry, click the <strong>Add Entry</strong> button on the right hand side.
+            </p>
+            <!-- image here -->
+            <p>
+                On the following page, provide a Title, Description (optional), image, created on(date) and category. These settings will 
+                define how the artwork is displayed on the main website. 
+            </p>
+            <!-- image here -->
+            <p>NOTES:</p>
+            <ul>
+                <li>
+                    The Description will only appear on the page for the individual artwork on the main website. If you don't provide a Description for the artwork, 
+                    this section will be blank.
+                </li>
+                <li>
+                    To add an image, click the <strong>Add media</strong> button and then either select "Add existing media" or "Add new media". 
+                    <ul>
+                        <li>
+                            Clicking "Add existing media" will allow you to select any media you have previously uploaded through the "Media" tab 
+                            or any other published work.  
+                        </li>
+                        <li>
+                            Clicking "Add new media" will bring up the window for uploading a new media asset (see <a href="#">Add new media</a> for details).
+                        </li>
+                        <li>
+                           If you want to change the image after selecting it, click on the 3 little dots in the box and either select "edit" to alter the image 
+                           or "remove" to remove it and select a different image.     
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    The created on(date) will show up underneath the artwork title on the main website, and will only display the month and year.  
+                </li>
+                <li>
+                    Any category you select will cause the artwork piece to show up in that category section on the main website. If you select multiple categories
+                    your artwork will show up in those multiple categories on the main website.  
+                </li>
+                <li>
+                    The slug is the web address for the individual page for that specific artwork, and is based on the title of the piece. 
+                    For example if the slug is "Joy", the address for that individual piece will be 
+                    <strong>https://carole-website-contentful.vercel.app/art/joy</strong>
+                    <ul>
+                        <li>
+                            <strong>Note: you cannot have 2 artwork pieces with the same slug</strong>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    The final setting is <strong>front page image</strong>. Selecting "yes" here will cause the image to show up on the front page of the main website.
+                    <strong>However, if you have selected "yes" on multiple pieces of artwork, only ONE of them will appear on the front page.</strong> 
+                </li>
+            </ul>
+            <p>
+                Once you are happy with your settings, click the green <strong>Publish</strong> button on the right hand side to 
+                publish the artwork to the main website.
+            </p>     
         </section>
         <section class="edit-artwork">
             <h1>Edit artwork</h1>
+            <p>
+                To get started, go to the <strong>Content</strong> tab at the top of the screen and you should see all the published artwork.
+            </p>
+            <p>
+                To edit a piece of artwork after publishing it, click the name of the artwork you wish to edit.
+            </p>
+            <p>
+                Make the changes as you see fit (remember that all "required" fields must have something in them).
+            </p>
+            <p>
+                Once you are happy with your edits, click the green <strong>Publish Changes</strong> button on the right hand side to 
+                publish the artwork to the main website.
+            </p>
         </section>
         <section class="unpublish-artwork">
             <h1>Unpublish artwork</h1>
+            <p>
+                Unpublishing an artwork piece will remove it from the main website but not delete it entirely. 
+                To get started, go to the <strong>Content</strong> tab at the top of the screen and you should see all the published artwork.
+            </p>
+            <p>
+                Click on the <strong>little white square</strong> next to the title of the artwork piece you wish to unpublish.
+            </p>
+            <p>
+                Click the <strong>Unpublish</strong> button. Once done, the artwork piece should have a "draft" status and will no longer show up
+                on the main website.
+            </p>
+            <p>To re-publish an artwork piece again, Click on the <strong>little white square</strong> 
+                next to the title and select the green <strong>Publish</strong>
+            </p>
         </section>
         <section class="delete-artwork">
             <h1>Delete artwork</h1>
-        </section>
-        <section class="frontpage-artwork">
-            <h1>Set frontpage artwork</h1>
+            <p>
+                Deleting an artwork piece will delete everything about it - <strong>This process is irreversible</strong>. 
+                To get started, go to the <strong>Content</strong> tab at the top of the screen and you should see all the published artwork.
+            </p>
+            <p>
+                You can only delete unpublished artwork, so do that first (see previous section)
+            </p>
+            <p>
+                Once unpublished, Click on the <strong>little white square</strong> 
+                next to the title and select red <strong>Delete</strong> button
+            </p>
         </section>
     </main>
-    <aside>
-        <nav>
-            <li>Intro</li>
-            <li>Login</li>
-            <li>Add Media</li>
-            <li>Add Artwork</li>
-            <li>Edit Arwork</li>
-            <li>Unpublish Artwork</li>
-            <li>Delete Artwork</li>
-            <li>Set Frontpage Artwork</li>
-        </nav>
-    </aside>
-    <footer></footer>
+    <footer>
+        <p>Copywrite 2023 by Warren Hawker, all rights reserved</p>
+    </footer>
     <script src="/js/index.js"></script>
 </body>
 </html>

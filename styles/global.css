@@ -1,9 +1,48 @@
+@import url(./header.css);
+@import url(./footer.css);
+@import url(./nav.css);
+
 *, *::after, *::before {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 80%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+    padding: 0 2em;
+}
+
+section {
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 2em;
+    border-bottom: 2px dashed black;
+}
+
+.img-text-container {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    gap: 2em;
+}
+
+.img-text-container p {
+    margin: auto;
+}
+
+.delete-artwork {
+    border-bottom: none;
+}
+
+.img-container {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 img {
@@ -11,3 +50,36 @@ img {
     margin: auto;
     width: 100%;
 }
+
+h1 {
+    font-size: clamp(48px, 3vw, 96px);
+    font-weight: 700;
+    color: #fbbb62;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: clamp(30px, 2vw, 40px);
+}
+
+h3 {
+    font-weight: 600;
+    font-size: clamp(24px, 1.75vw, 30px);
+}
+
+p, li {
+    font-size: clamp(16px, 1.5vw, 24px);
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: #c8a2c8;
+    font-weight: 600;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+} 
+
+
