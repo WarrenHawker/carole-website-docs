@@ -18,20 +18,20 @@
     </header>
     <aside>
         <nav>
-            <div class="nav-links">
-                <h3>Go To</h3>
-                <a href="#">Introduction</a>
-                <a href="#">Login</a>
-                <a href="#">Add media</a>
-                <a href="#">Add artwork</a>
-                <a href="#">Edit artwork</a>
-                <a href="#">Unpublish artwork</a>
-                <a href="#">Delete artwork</a>
+            <h3 id="nav-toggle"> &#10148;</h3>
+            <div id="nav-links">
+                <a href="#intro">Intro</a>
+                <a href="#login">Login</a>
+                <a href="#add-media">Add media</a>
+                <a href="#add-artwork">Add artwork</a>
+                <a href="#edit-artwork">Edit artwork</a>
+                <a href="#unpublish-artwork">Unpublish artwork</a>
+                <a href="#delete-artwork">Delete artwork</a>
             </div>
         </nav>
     </aside>
     <main>
-        <section class="intro">
+        <section id="intro">
             <h1>Introduction</h1>
             <p>
                 All the artwork for the <a href="#">Carole Tongue website</a> is managed by a system called <strong>"Contentful"</strong>. 
@@ -40,7 +40,7 @@
                 it affects how the artwork looks on the main website. 
             </p>
         </section>
-        <section class="login">
+        <section id="login">
             <h1>Login to Contentful</h1>
             <p>
                 To login, go to <a href="https://be.contentful.com/login">https://be.contentful.com/login</a> and login with your credentials.
@@ -57,7 +57,7 @@
                 Once logged in you will be automatically taken to the Content page where you can see all the published artwork.
             </p>
         </section>
-        <section class="add-media">
+        <section id="add-media">
             <h1>Add new media</h1>
             <p>
                 The images for any new pieces of artwork need to be added as media before they can appear on the main website. 
@@ -65,56 +65,77 @@
                 To add new media, go to the <strong>Media</strong> tab at the top on the screen. You should now see all the 
                 images that have currently been uploaded.  
             </p>
-            <!-- image here -->
-            <p>
-                To add new media, click the <strong>Add Asset</strong> button, then select either "single asset" to 
-                upload one image at a time, or "multiple assets" to upload multiple images at once.
-            </p>
-            <!-- image here -->
+            <div class="img-container">
+                <img src="assets/media-page.png" alt="media page"/>
+            </div>
+            <div class="img-text-container">
+                <div class="img-container">
+                    <img src="assets/add-assets.png" alt="add assets"/>
+                </div>
+                <p>
+                    To add new media, click the <strong>Add Asset</strong> button, then select either "single asset" to 
+                    upload one image at a time, or "multiple assets" to upload multiple images at once.
+                </p>
+            </div>
             <article class="single-media">
+                <h3>Adding single media</h3>
+                <div class="img-container">
+                    <img src="assets/single-asset.png" alt="adding single asset"/>
+                </div>
                 <p>
                     Adding a single media piece lets you give it a specific title and description. These are optional
-                    and don't be displayed on the main website (they are for your reference only). If you choose not to 
+                    and won't be displayed on the main website (they are for your reference only). If you choose not to 
                     give a title, it will use the same title as the file name.  
                 </p>
-                <p>
-                    Inside the "File(required)" box, click the <strong>Open file selector</strong> button. 
-                    From here you can select an image from a number of different sources, including your PC, Facebook, Instagram, etc..
-                    Or drag'n'drop images directly into the window
-                </p>
-                 <!-- image here -->
-                 <p>
-                    Once you've chosen your image, a preview of it will appear in the box. Below the box there are a number of options 
-                    for altering the image if you aren't happy with it. If you wish to use a different image, click the "delete file" button
-                    and choose a different file as before.
-                 </p>
-                 <!-- image here -->
+                <div class="img-text-container">
+                    <div class="img-container">
+                        <img src="assets/choose-file-single.png" alt="choosing single file"/>
+                    </div>
+                    <p>
+                        Inside the "File(required)" box, click the <strong>Open file selector</strong> button. 
+                        From here you can select an image from a number of different sources, including your PC, Facebook, Instagram, etc..
+                        Or drag'n'drop images directly into the window
+                    </p>
+                </div>
+                <div class="img-text-container">
+                    <p>
+                        Once you've chosen your image, a preview of it will appear in the box. Below the box there are a number of options 
+                        for altering the image if you aren't happy with it. If you wish to use a different image, click the "delete file" button
+                        and choose a different file as before.
+                     </p>
+                    <div class="img-container">
+                        <img src="assets/delete-file.png" alt="file preview"/>
+                    </div>
+                 </div>
+                 
                  <p> 
                     Once you are happy with your image, click the green <strong>Publish</strong> button on the right hand side to 
                     save your work. 
                  </p>
+                 <div class="img-container">
+                    <img src="assets/publish-media.png" alt="publish new media"/>
+                </div>
             </article>
             <article class="multiple-media">
+                <h3>Adding multiple media</h3>
                 <p>
                     When adding multiple media pieces, the titles will be the same as the file names.
                     Inside the popup box, select the media pieces from your chosen source, or drag'n'drop them directly into the window. 
                 </p>
-                 <!-- image here -->
-                 <p>
-                    Clicking on the "edit" button next to an image will allow you to edit the image by cropping or rotating it. 
-                 </p>
-                 <!-- image here -->
-                 <p>
-                    To remove an image from the selection, click the "X" button next to the image you want to remove. 
-                 </p>
-                 <!-- image here -->
-                 <p>
-                    Once you're happy with all the images, click the <strong>Upload</strong> button to save your work. 
-                 </p>
+                <div class="img-text-container">
+                    <div class="img-container">
+                        <img src="assets/choose-multiple-files.png" alt="choosing multiple files"/>
+                    </div>
+                    <p>
+                        Clicking on the "edit" button next to an image will allow you to edit the image by cropping or rotating it. 
+                        To remove an image from the selection, click the "X" button next to the image you want to remove. 
+                        Once you're happy with all the images, click the <strong>Upload</strong> button to save your work. 
+                    </p>
+                </div>
             </article>
             <p><strong>NOTE: Images of artwork only show up on the main website when they are linked to an Artwork entry. See below for how to do this.</strong></p>
         </section>
-        <section class="add-artwork">
+        <section id="add-artwork">
             <h1>Add new artwork</h1>
             <p>
                 To get started, go to the <strong>Content</strong> tab at the top of the screen and you should see all the published artwork.
@@ -178,7 +199,7 @@
                 publish the artwork to the main website.
             </p>     
         </section>
-        <section class="edit-artwork">
+        <section id="edit-artwork">
             <h1>Edit artwork</h1>
             <p>
                 To get started, go to the <strong>Content</strong> tab at the top of the screen and you should see all the published artwork.
@@ -194,7 +215,7 @@
                 publish the artwork to the main website.
             </p>
         </section>
-        <section class="unpublish-artwork">
+        <section id="unpublish-artwork">
             <h1>Unpublish artwork</h1>
             <p>
                 Unpublishing an artwork piece will remove it from the main website but not delete it entirely. 
@@ -211,7 +232,7 @@
                 next to the title and select the green <strong>Publish</strong>
             </p>
         </section>
-        <section class="delete-artwork">
+        <section id="delete-artwork">
             <h1>Delete artwork</h1>
             <p>
                 Deleting an artwork piece will delete everything about it - <strong>This process is irreversible</strong>. 

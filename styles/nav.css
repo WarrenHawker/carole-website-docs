@@ -1,24 +1,28 @@
 aside {
-    padding: 0 1em;
-    position: relative;
-    border-right: 2px solid black;
-    max-width: 350px;
-}
-
-.nav-links {
+    width: 10%;
     position: fixed;
-    left: 0;
-    padding-left: 1em;
+    height: 100%;
+    padding-right: 1em;
 }
 
-.nav-links h3 {
+#nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#nav-toggle {
     text-align: center;
     font-weight: 700;
     margin-bottom: 0.5em;
     color: #fbbb62;
+    display: none;
+    cursor: pointer;
+    padding-left: 0.5em;
 }
 
-.nav-links a {
+#nav-links a {
     display: block;
     margin-bottom: 2em;
     list-style: none;
@@ -28,15 +32,28 @@ aside {
     -moz-box-shadow: 3px 8px 5px 0px rgba(209,202,209,1);
     box-shadow: 3px 8px 5px 0px rgba(209,202,209,1);
     font-weight: 600;
-    font-size: clamp(16px, 1.5vw, 24px);
     color: black;
     padding: 0.5em;
-    max-width: 15vw;
 }
 
-@media screen and (max-width: 650px) {
-    .nav-links a {
-        display: none;
+@media screen and (max-width: 800px) {
+    #nav-links {
+        transform: translateX(-600px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #nav-links.show {
+        position: absolute;
+        z-index: 10;
+        background-color: #f4f4f4;
+        width: 50vw;
+        padding: 1em;
+        transform: translateX(0);
+        transition: all 0.5s ease-in-out;       
+    }
+
+    #nav-toggle {
+        display: block;
     }
 }
 
