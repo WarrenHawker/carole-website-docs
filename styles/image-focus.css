@@ -1,0 +1,67 @@
+#image-focus-overlay {
+    overflow-y: auto;
+	overflow-x: hidden;
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(1.09);
+	transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+	padding-top: 20px;
+}
+
+#image-focus-overlay.active {
+    visibility: visible;
+	opacity: 1;
+	transform: scale(1);
+}
+
+.image-focus-container {
+    background-color: #ffffff;
+	color: #000000;
+	text-align: center;
+	margin: auto;
+	border-radius: 10px;
+	position: relative;
+	width: 90%;
+	max-width: 1000px;
+	height: 500px;
+	margin-top: 20px;
+}
+
+#overlay-close {
+	position: absolute;
+	top: 5px;
+	right: -50px;
+	font-size: 2.1rem;
+	cursor: pointer;
+	transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+	background-color: #fff;
+	color: #fbbb62;
+	line-height: 0.7;
+	z-index: 999;
+}
+
+#overlay-close:hover,
+#overlay-close:focus {
+	transform: scale(1.2);
+}
+
+#focused-image {
+    max-height: 90%;
+    max-width: 90%;
+}
+
+@media screen and (max-width:1000px) {
+    #overlay-close {
+        right: 50%;
+        left: 50%;
+        top: 90%;
+
+    }
+}

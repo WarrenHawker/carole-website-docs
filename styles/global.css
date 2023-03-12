@@ -1,6 +1,7 @@
 @import url(./header.css);
 @import url(./footer.css);
 @import url(./nav.css);
+@import url(./image-focus.css);
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -66,6 +67,7 @@ img {
     display: block;
     margin: auto;
     width: 100%;
+    cursor: pointer;
 }
 
 h1 {

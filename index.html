@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0de87d0496.js" crossorigin="anonymous"></script>
     <title>Carole Website Docs</title>
 </head>
 <body>
@@ -140,16 +141,18 @@
             <p>
                 To get started, go to the <strong>Content</strong> tab at the top of the screen and you should see all the published artwork.
             </p>
-            <!-- image here -->
-            <p>
-                To add a new artwork entry, click the <strong>Add Entry</strong> button on the right hand side.
-            </p>
-            <!-- image here -->
+            <div class="img-text-container">
+                <p>
+                    To add a new artwork entry, click the <strong>Add Entry</strong> button on the right hand side.
+                </p>
+                <div class="img-container">
+                    <img src="assets/add-new-artwork.png" alt="add new artwork"/>
+                </div>
+            </div>
             <p>
                 On the following page, provide a Title, Description (optional), image, created on(date) and category. These settings will 
                 define how the artwork is displayed on the main website. 
             </p>
-            <!-- image here -->
             <p>NOTES:</p>
             <ul>
                 <li>
@@ -198,6 +201,9 @@
                 Once you are happy with your settings, click the green <strong>Publish</strong> button on the right hand side to 
                 publish the artwork to the main website.
             </p>     
+            <div class="img-container">
+                <img src="assets/save-edit-artwork.png" alt="publish artwork"/>
+            </div>
         </section>
         <section id="edit-artwork">
             <h1>Edit artwork</h1>
@@ -214,6 +220,9 @@
                 Once you are happy with your edits, click the green <strong>Publish Changes</strong> button on the right hand side to 
                 publish the artwork to the main website.
             </p>
+            <div class="img-container">
+                <img src="assets/save-edit-artwork.png" alt="save edit artwork"/>
+            </div>
         </section>
         <section id="unpublish-artwork">
             <h1>Unpublish artwork</h1>
@@ -222,14 +231,20 @@
                 To get started, go to the <strong>Content</strong> tab at the top of the screen and you should see all the published artwork.
             </p>
             <p>
-                Click on the <strong>little white square</strong> next to the title of the artwork piece you wish to unpublish.
+                Click on the <strong>little white square</strong> next to the title of the artwork piece you wish to unpublish, then click the <strong>Unpublish</strong> button.
             </p>
+            <div class="img-container">
+                <img src="assets/unpublish-artwork.png" alt="unpublish artwork"/>
+            </div>
             <p>
-                Click the <strong>Unpublish</strong> button. Once done, the artwork piece should have a "draft" status and will no longer show up
+                 Once done, the artwork piece should have a "draft" status and will no longer show up
                 on the main website.
             </p>
+            <div class="img-container">
+                <img src="assets/draft-artwork.png" alt="draft artwork"/>
+            </div>
             <p>To re-publish an artwork piece again, Click on the <strong>little white square</strong> 
-                next to the title and select the green <strong>Publish</strong>
+                next to the title and select the green <strong>Publish</strong> button.
             </p>
         </section>
         <section id="delete-artwork">
@@ -261,6 +276,12 @@
         </div>
         </section>
     </main>
+    <div id="image-focus-overlay">
+        <div class="image-focus-container">
+            <i class='fa fa-window-close' id='overlay-close'></i>
+            <img id="focused-image" src="" alt=""/>
+        </div>
+    </div>
     <footer>
         <p>Copywrite 2023 by Warren Hawker, all rights reserved</p>
     </footer>
